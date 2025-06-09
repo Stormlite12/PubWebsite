@@ -50,7 +50,7 @@ const ContactForm = () => {
          <div className="text-center mt-5">
           <h1 className="md:text-4xl sm:text-5xl  text-[#C8A97E ] tracking-wider font-['Playfair_Display']">Get in Touch</h1>
           <p className="mt-2 sm:mt-4   text-sm sm:text-base text-center text-[#C8A97E] font-['Lato'] w-[30%] mx-auto">
-           Whether you're planning a private event, have questions about our menu, or just want to say hello, we'd love to hear from you 
+           Whether you&apos;re planning a private event, have questions about our menu, or just want to say hello, we&apos;d love to hear from you 
            <br className="hidden sm:inline" />
           </p>
         </div>

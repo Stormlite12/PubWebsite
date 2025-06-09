@@ -54,7 +54,7 @@ const Hero = () => {
     {/* <div>
      <p className=" absolute mx-auto font-['Playfair_Display'] xl:text-[2rem] lg:text-[0.8rem] md:text-[0.6rem] leading-[1.6] mt-5 text-[#fcebd2]">
       Welcome to The Black Hound — where the ale is cold, the food is hearty, and the music never stops.<br /><br />
-      Whether you're here for a quiet pint or a night of live bands and laughter, we've got a table waiting just for you.
+      Whether you&apos;re here for a quiet pint or a night of live bands and laughter, we&apos;ve got a table waiting just for you.
     </p> */}
     {/* <button className="mt-7 py-2 px-5 bg-[#fcebd2] text-[#963f25] font-bold xl:text-base lg:text-[0.8rem] md:text-[0.7rem] cursor-pointer border-none rounded-sm">
       Explore Menu
@@ -73,4 +73,3 @@ export default Hero;
 
 
 
-   

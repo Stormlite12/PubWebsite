@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -39,9 +41,9 @@ const Aboutus = () => {
           </motion.h2>
 
           {[
-            "Nestled in the heart of the city, The Black Hound has been a gathering place for friends and strangers alike — a haven where stories are shared over timeless pints and laughter fills the air. Our story is steeped in tradition but fueled by the spirit of community.",
-            "Our vision is simple: to craft an atmosphere where warmth meets character, where every visit feels like coming home. We blend the classic charm of a traditional pub with a modern twist, creating a space that’s as inviting as it is unforgettable.",
-            "At The Black Hound, we value authenticity, quality, and connection. From locally sourced brews to our welcoming staff, every detail reflects our commitment to delivering an experience that’s honest, heartfelt, and uniquely ours.",
+            "Nestled in the heart of the city, The Black Hound has been a gathering place for friends and strangers alike — a haven where stories are shared over timeless pints and laughter fills the air. Our story is steeped in tradition but fueled by the spirit of community.".replace(/'/g, "&apos;"),
+            "Our vision is simple: to craft an atmosphere where warmth meets character, where every visit feels like coming home. We blend the classic charm of a traditional pub with a modern twist, creating a space that’s as inviting as it is unforgettable.".replace(/'/g, "&apos;"),
+            "At The Black Hound, we value authenticity, quality, and connection. From locally sourced brews to our welcoming staff, every detail reflects our commitment to delivering an experience that’s honest, heartfelt, and uniquely ours.".replace(/'/g, "&apos;"),
           ].map((text, i) => (
             <motion.p
               key={i}
