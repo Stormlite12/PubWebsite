@@ -1,6 +1,6 @@
 'use client';
 
-import { useLenis } from '@/hooks/useLenis'; // your Lenis hook
+
 
 import Hero from './components/Hero';
 import Header from './components/Header';
