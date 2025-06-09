@@ -1,0 +1,31 @@
+{
+  "name": "pub-effect",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.48",
+    "@studio-freight/lenis": "^1.0.42",
+    "framer-motion": "^12.16.0",
+    "fullpage.js": "^4.0.36",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.513.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "saas": "^1.0.0",
+    "sass": "^1.89.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4"
+  }
+}
