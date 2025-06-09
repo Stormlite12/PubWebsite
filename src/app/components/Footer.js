@@ -6,7 +6,7 @@ const Footer=()=>{
        <section className="flex flex-col h-screen items-center justify-center px-4 mt-4 bg-[#000000]">
                 <div className="text-white text-4xl font-normal font-['Playfair_Display'] py-5">Find your way to us</div>
                 <div className="border-b border-[#3a2a1a] border-t w-[90%] ">
-                    <img className="w-auto mx-auto h-auto mt-20 mb-20" src="/assets/mappy.png" />
+                    <Image className="w-auto mx-auto h-auto mt-20 mb-20" src="/assets/mappy.png" />
                 <footer className="text-[#e5cfa2] py-4 ">
                    <div className="max-w-7xl mx-auto py-4 flex items-center">
 
@@ -27,9 +27,9 @@ const Footer=()=>{
 
                     {/* Right: Social */}
                     <div className="flex-none flex space-x-4">
-                        <a href="#"><img src="/assets/fb.png" className="w-5 h-5" /></a>
-                        <a href="#"><img src="/assets/ig.png" className="w-5 h-5" /></a>
-                        <a href="#"><img src="/assets/x.png" className="w-5 h-5" /></a>
+                        <a href="#"><Image src="/assets/fb.png" className="w-5 h-5" /></a>
+                        <a href="#"><Image src="/assets/ig.png" className="w-5 h-5" /></a>
+                        <a href="#"><Image src="/assets/x.png" className="w-5 h-5" /></a>
                     </div>
 
                     </div>

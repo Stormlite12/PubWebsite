@@ -11,21 +11,21 @@ const BarSections = () => {
       
           subtitle: "Proper Pub Traditions",
           desc: "We honor centuries of pub culture with perfectly poured pints, proper glassware, and time-tested recipes. Our barkeeps train in the old ways.",
-          imgSize: "w-[60px]",
-          bgImg: "/assets/Heritage1.png",
+          ImageSize: "w-[60px]",
+          bgImage: "/assets/Heritage1.png",
         },
         {
    
           subtitle: "Liquid Artistry",
           desc: "From cask-conditioned ales to rare whiskies and craft cocktails with a twist, our menu rewards the curious drinker.",
-          imgSize: "w-[90px]",
-           bgImg: "/assets/wine.png",
+          ImageSize: "w-[90px]",
+           bgImage: "/assets/wine.png",
         },
         {
           subtitle: "Dark & Lively",
           desc: "The Black Hound hums with crackling firelight, the clink of glasses, and nightly live folk music. Every corner tells a story.",
-          imgSize: "w-[30px] mt-10",
-          bgImg: "/assets/music.png",
+          ImageSize: "w-[30px] mt-10",
+          bgImage: "/assets/music.png",
         }
       ].map((section, idx) => (
      <motion.div
@@ -39,12 +39,12 @@ const BarSections = () => {
           <div
             className="cover"
             style={{
-              backgroundImage: `url(${section.bgImg})`,
+              backgroundImage: `url(${section.bgImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <img src={section.img} alt={section.alt} className={`${section.imgSize} mb-4`} />
+            <Image src={section.Image} alt={section.alt} className={`${section.ImageSize} mb-4`} />
             <div className="text font-bold text-xl">{section.title}</div>
           </div>
 

@@ -63,7 +63,7 @@ const Aboutus = () => {
           transition={{ duration: 5, ease: "easeOut" }}
           className="order-1 md:order-2 flex justify-end items-center w-[100%]  md:h-auto relative"
         >
-          <img
+          <Image
             src="assets/Pub-drink.jpg"
             alt="Hand holding a drink"
             className="absolute w-[70%] h-[90%] object-cover rounded-lg"
