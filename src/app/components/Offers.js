@@ -82,7 +82,7 @@ const Offers = () => {
           ref={videoRef}
           muted
           playsInline
-          className="w-full h-full object-cover my-auto"
+          className="w-full h-[85vh] object-cover my-auto"
           src="assets/drink3.mp4"
           preload="auto"
         />
