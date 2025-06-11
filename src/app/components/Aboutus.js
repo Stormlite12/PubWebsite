@@ -165,7 +165,7 @@ if (index === 1) {
         <div className="max-w-4xl text-center space-y-6">
           <h2 className="text-4xl font-light">Welcome to The Black Hound</h2>
           <p className="text-lg text-[#F8E1C6]/80 font-light leading-relaxed">
-            Now that you've learned about our story, vision, and values, we
+            Now that you&apos;ve learned about our story, vision, and values, we
             invite you to experience The Black Hound for yourself. Come join us
             for an unforgettable evening.
           </p>
