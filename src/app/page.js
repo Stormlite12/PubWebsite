@@ -9,7 +9,7 @@ import Offers from './components/Offers';
 import BarSections from './components/BarSections';
 import ContactForm from './components/ContactForm';
 import BackgroundWrapper from './components/BackgroundWrapper';
-import SkewedMarquee from './components/SkewedMarquee';
+
 import BackgroundWrapper2 from './components/BackgroundWrapper2';
 import Footer from './components/Footer';
 
@@ -37,9 +37,7 @@ import Footer from './components/Footer';
       </section>
 
       <section style={{ scrollSnapAlign: 'start' }}>
-          {/* <SkewedMarquee /> */}
           <Offers />
-          {/* <SkewedMarquee /> */}
       </section>
 
 

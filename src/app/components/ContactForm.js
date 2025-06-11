@@ -46,10 +46,10 @@ const ContactForm = () => {
 
   return (
     
-    <div className="bg-[#000000] text-gray-300 h-screen flex flex-col gap-y-10 ">
-         <div className="text-center mt-5">
+    <div className="bg-[#000000] text-gray-300 h-screen flex flex-col">
+         <div className="text-center mb-5 mt-5 ">
           <h1 className="md:text-4xl sm:text-5xl  text-[#C8A97E ] tracking-wider font-['Playfair_Display']">Get in Touch</h1>
-          <p className="mt-2 sm:mt-4   text-sm sm:text-base text-center text-[#C8A97E] font-['Lato'] w-[30%] mx-auto">
+          <p className="mt-2 sm:mt-4   text-sm sm:text-base text-center text-[#C8A97E] font-['Lato'] w-[500px] mx-auto">
            Whether you&apos;re planning a private event, have questions about our menu, or just want to say hello, we&apos;d love to hear from you 
            <br className="hidden sm:inline" />
           </p>
@@ -58,8 +58,8 @@ const ContactForm = () => {
    
 
 
-   <div className="bg-[url('/assets/blackburnish.png')] bg-cover bg-center w-full  border-[#523D2C] border-b border-t  ">
-        <div className="w-[60%] bg-[#000000] border border-[#523D2C] mx-auto px-5  md rounded-lg mt-15 mb-15 py-15">
+   <div className="bg-[url('/assets/blackburnish.png')] bg-cover bg-center w-full border-[#523D2C] border-b border-t  ">
+        <div className="md:w-[900px] sm:w-[50%] bg-[#000000] border border-[#523D2C] mx-auto px-5  md rounded-lg mt-15 mb-15 py-15">
 
          <div className="grid grid-cols-1 md:grid-cols-2 space-x-20 text-[#fcebd2] w-[95%] mx-auto">
               {/* Left Column - Contact Info */}

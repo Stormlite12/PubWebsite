@@ -42,6 +42,7 @@ export default function BackgroundWrapper({ children }) {
             backgroundPosition: 'center',
             transition: `transform ${startAnimation ? 1200 : 0}ms ease ${startAnimation ? 600 : 0}ms`,
             transform: startAnimation ? 'scale(1)' : 'scale(1.4)',
+        
             height: '100%',
             width: '100%',
           }}

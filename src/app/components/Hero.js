@@ -17,12 +17,17 @@ const Hero = () => {
   return (
     <section className=" flex flex-col lg:flex-row justify-between items-center px-[10%] relative mx-auto min-h-screen">
    <div className="text-[3rem] text-[#fcebd2]  absolute top-0 left-1/2 transform -translate-x-1/2 mt-4 animate-slideFadeIn animate-neon-flicker font-slackey">
-  Black Hound
-</div>
+    Black Hound
+    </div>
+
+    <div className="text-[4rem] text-[#fcebd2] absolute top-1/2 -mt-20 left-1/2 -translate-x-1/2 animate-fade-in font-slackey">
+    Welcome
+    </div>
+
 
     
 
-<div className="w-full items-center ">
+  <div className="w-full items-center ">
   <h2
     className="absolute bottom-20 right-50 flex items-baseline gap-2 font-['Merriweather'] text-[#fcebd2] xl:text-[3rem] lg:text-[2rem] font-extrabold leading-tight"
     style={{
@@ -31,15 +36,6 @@ const Hero = () => {
       textShadow: '2px 2px 6px rgba(0, 0, 0, 0.6)',
     }}
   >
-
-
-    <div className="text-[3rem] text-[#fcebd2]  absolute -top-5 left-1/2 transform -translate-x-1/2 mt-4 font-slackey">
- Welcome
-</div>
-
-
-    
-    
     {/* <p className="">
       <span className="xl:text-[3.5rem] lg:text-[2rem] italic -mt-6 leading-none">&ldquo; </span>
       Where the night&apos;s young <br />

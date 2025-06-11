@@ -45,7 +45,7 @@ const BarSections = () => {
               backgroundPosition: "center",
             }}
           >
-            <Image src={section.Image} alt={section.alt} className={`${section.ImageSize} mb-4`} />
+            <Image src={section.bgImage} alt='bgimage' fill className={`${section.ImageSize} mb-4`} />
             <div className="text font-bold text-xl">{section.title}</div>
           </div>
 

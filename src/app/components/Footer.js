@@ -4,10 +4,18 @@ import Image from 'next/image';
 
 const Footer=()=>{
     return(
-       <section className="flex flex-col h-screen items-center justify-center px-4 mt-4 bg-[#000000]">
-                <div className="text-white text-4xl font-normal font-['Playfair_Display'] py-5">Find your way to us</div>
-                <div className="border-b border-[#3a2a1a] border-t w-[90%] ">
-                    <Image className="w-auto mx-auto h-auto mt-20 mb-20" src="/assets/mappy.png" />
+       <section className="flex flex-col h-screen items-center justify-center px-4  bg-[#000000]">
+                <div className="text-white text-4xl font-normal font-['Playfair_Display']  ">Find your way to us</div>
+                <div className="border-b border-[#3a2a1a] border-t w-[90%] translate-y-5 ">
+                    <div className="relative w-auto h-[50vh] mt-15 mb-10 mx-auto">
+                    <Image
+                        src="/assets/mappy.png"
+                        alt="Map image"
+                        fill
+                        className="object-contain"
+                    />
+                    </div>
+
                 <footer className="text-[#e5cfa2] py-4 ">
                    <div className="max-w-7xl mx-auto py-4 flex items-center">
 
@@ -18,7 +26,7 @@ const Footer=()=>{
                     </div>
 
                     {/* Center: Nav */}
-                    <nav className="flex-1 flex justify-center pr-25 space-x-6 font-['Playfair_Display'] text-sm font-medium text-[#e5cfa2]">
+                    <nav className="flex-1 flex justify-center  space-x-6 font-['Playfair_Display'] text-sm font-medium text-[#e5cfa2]">
                         <a href="#" className="hover:text-white">Home</a>
                         <a href="#" className="hover:text-white">Events</a>
                         <a href="#" className="hover:text-white">Menu</a>
@@ -27,10 +35,16 @@ const Footer=()=>{
                     </nav>
 
                     {/* Right: Social */}
-                    <div className="flex-none flex space-x-4">
-                        <a href="#"><Image src="/assets/fb.png" className="w-5 h-5" /></a>
-                        <a href="#"><Image src="/assets/ig.png" className="w-5 h-5" /></a>
-                        <a href="#"><Image src="/assets/x.png" className="w-5 h-5" /></a>
+                    <div className="flex-none flex mr-20 space-x-4">
+                        <div className="w-5 h-5">
+                            <a href="#"><Image width={100} height={100}  src="/assets/fb.png" alt="social-media"  /></a>
+                        </div>
+                         <div className="w-5 h-5">
+                            <a href="#"><Image width={100} height={100}  src="/assets/fb.png" alt="social-media"  /></a>
+                        </div>
+                          <div className="w-5 h-5">
+                             <a href="#"><Image width={100} height={100}  src="/assets/fb.png" alt="social-media" /></a>
+                        </div>
                     </div>
 
                     </div>
@@ -38,7 +52,7 @@ const Footer=()=>{
                 </footer>
                 </div>
                 
-        <div className="justify-start text-amber-100 text-base font-normal font-['Playfair_Display'] mb-4">© 2023 The Rustic Barrel. All rights reserved. | Privacy Policy | Terms of Service</div>
+        <div className="justify-start text-amber-100 text-base font-normal font-['Playfair_Display'] mb-4">© 2023 The Rustic Barrel. All rights reserved. | Privacy Policy | Terms of Service</div>
        </section>
     )
 }
