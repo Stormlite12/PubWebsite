@@ -268,8 +268,8 @@ html {
 .book {
   position: relative;
   border-radius: 16px;
-  width: 300px;
-  height: 340px;
+  width: 250px;
+  height: 280px;
   background: rgba(255, 255, 255, 0.05); /* more neutral + soft glow */
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -309,7 +309,7 @@ html {
 }
 
 .book:hover .inner {
-  transform: rotateZ(10deg) rotateX(-3deg) rotateY(-10deg) translateX(120px);
+  transform: rotateZ(10deg) rotateX(-3deg) rotateY(-10deg) translateX(100px);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   z-index: 30;
   

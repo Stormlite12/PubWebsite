@@ -147,7 +147,7 @@ const Offers = () => {
       </div>
 
      {/* Bottom Marquee */}
-<div className="relative bg-black py-6 overflow-hidden border-t border-b border-cream z-30">
+<div className="relative bg-black py-6 overflow-hidden border-t border-b border-cream z-30 flex items-center justify-center">
   <div className="whitespace-nowrap animate-marquee text-cream tracking-widest uppercase text-2xl font-bold select-none">
     {marqueeContent}
   </div>

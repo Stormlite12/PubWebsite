@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const BarSections = () => {
   return (
-    <section className="mx-auto min-h-screen z-10 flex flex-col md:flex-row justify-around items-center px-4 py-16">
+    <section className=" min-h-screen z-10 flex flex-col md:flex-row justify-center gap-33 items-center py-16">
 
       {/* Card Variants */}
       {[
@@ -12,20 +12,20 @@ const BarSections = () => {
       
           subtitle: "Proper Pub Traditions",
           desc: "We honor centuries of pub culture with perfectly poured pints, proper glassware, and time-tested recipes. Our barkeeps train in the old ways.",
-          ImageSize: "w-[60px]",
+          ImageSize: " rounded-lg",
           bgImage: "/assets/Heritage1.png",
         },
         {
    
           subtitle: "Liquid Artistry",
           desc: "From cask-conditioned ales to rare whiskies and craft cocktails with a twist, our menu rewards the curious drinker.",
-          ImageSize: "w-[90px]",
+          ImageSize: "  rounded-lg",
            bgImage: "/assets/wine.png",
         },
         {
           subtitle: "Dark & Lively",
           desc: "The Black Hound hums with crackling firelight, the clink of glasses, and nightly live folk music. Every corner tells a story.",
-          ImageSize: "w-[30px] mt-10",
+          ImageSize: " rounded-lg",
           bgImage: "/assets/music.png",
         }
       ].map((section, idx) => (
@@ -38,7 +38,7 @@ const BarSections = () => {
           className="book"
         >
           <div
-            className="cover"
+            className="cover "
             style={{
               backgroundImage: `url(${section.bgImage})`,
               backgroundSize: "cover",
@@ -46,7 +46,7 @@ const BarSections = () => {
             }}
           >
             <Image src={section.bgImage} alt='bgimage' fill className={`${section.ImageSize} mb-4`} />
-            <div className="text font-bold text-xl">{section.title}</div>
+            <div className="text font-bold text-xl rounded-lg">{section.title}</div>
           </div>
 
           <div className="inner">
