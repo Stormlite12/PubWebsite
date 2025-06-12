@@ -30,11 +30,12 @@ import Footer from './components/Footer';
           <Hero />
           <Header />
         </BackgroundWrapper>
+  
       </section>
-
-      <section style={{ scrollSnapAlign: 'start' }}>
+      <section style={{ scrollSnapAlign: 'start'}}>
         <Aboutus />
       </section>
+            
 
       <section style={{ scrollSnapAlign: 'start' }}>
           <Offers />

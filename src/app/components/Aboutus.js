@@ -12,23 +12,22 @@ const Aboutus = () => {
     {
       title: "Our Heritage",
       text: "Nestled in the heart of the city, The Black Hound has been a gathering place for friends and strangers alike — a haven where stories are shared over timeless pints and laughter fills the air.",
-      icon: "🏛️",
-      color: "from-amber-600/20 to-yellow-500/20",
-      borderColor: "from-[#F8E1C6] to-[#D4AF37]",
+
+      color: "from-black/60 to-black/60",
+      borderColor: "from-[#1b1b1b] to-[#2b2b2b]",
     },
     {
       title: "Our Vision",
       text: "Our vision is simple: to craft an atmosphere where warmth meets character, where every visit feels like coming home. We blend the classic charm of a traditional pub with a modern twist.",
-      icon: "✨",
-      color: "from-orange-600/20 to-amber-500/20",
-      borderColor: "from-[#D4AF37] to-[#F8E1C6]",
+
+      color: "from-black/60 to-black/60",
+      borderColor: "from-[#1b1b1b] to-[#2b2b2b]",
     },
     {
       title: "Our Values",
       text: "At The Black Hound, we value authenticity, quality, and connection. From locally sourced brews to our welcoming staff, every detail reflects our commitment to delivering a heartfelt experience.",
-      icon: "❤️",
-      color: "from-yellow-600/20 to-orange-500/20",
-      borderColor: "from-[#F8E1C6] to-[#D4AF37]",
+      color: "from-black/60 to-black/60",
+      borderColor: "from-[#1b1b1b] to-[#2b2b2b]",
     },
   ];
 
@@ -64,57 +63,70 @@ const Aboutus = () => {
     <div className="bg-black text-white font-[Merriweather]">
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-center">
-        <div className="text-center max-w-3xl px-6">
-          <motion.h2
-            ref={titleRef}
-            className="text-6xl text-[#F8E1C6] font-light leading-relaxed"
-            initial={{ clipPath: "inset(0 100% 0 0)" }}
-            animate={isTitleInView ? { clipPath: "inset(0 0% 0 0)" } : {}}
-            transition={{ duration: 2, ease: "easeOut" }}
-            style={{
-              WebkitClipPath: "inset(0 100% 0 0)",
-              textShadow: "0 0 2px #fff, 0 0 5px #f8e1c6aa",
-            }}
-          >
-            Our Story, Vision and Values
-          </motion.h2>
-          <p className="mt-6 text-lg text-[#F8E1C6]/60">
-            Scroll down to explore our journey
-          </p>
-        </div>
-      </div>
+  <motion.div
+    ref={titleRef}
+    className="text-center max-w-3xl px-6"
+    initial={{ opacity: 0, y: 50 }}
+    animate={isTitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+  >
+    <motion.h2
+      className="text-6xl text-[#F8E1C6] font-light leading-relaxed"
+      style={{
+        textShadow: "0 0 2px #fff, 0 0 5px #f8e1c6aa",
+      }}
+    >
+      Our Story, Vision and Values
+    </motion.h2>
+    <motion.p
+      className="mt-6 text-lg text-[#F8E1C6]/60"
+      initial={{ opacity: 0, y: 20 }}
+      animate={isTitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
+      Scroll down to explore our journey
+    </motion.p>
+  </motion.div>
+</div>
 
       {/* Stacking Cards Section */}
       <div
         ref={containerRef}
         className="relative -mt-130"
-style={{ height: `${(cardData.length - 1) * 100 + 80}vh` }}
+style={{ height: `${(cardData.length - 1) * 100 + 300}vh` }}
       >
         <div className="sticky top-0 h-screen flex items-center justify-center">
-          <div className="relative w-full max-w-xl min-h-[600px] overflow-visible">
+          <div className="relative w-full max-w-3xl min-h-[600px] overflow-visible">
             {cardData.map((card, index) => {
               const total = cardData.length;
             const spread = 1; // Make cards transition faster
          let start, end;
-              
+       const linger = 0.15; // how long to "pause" at full visibility
 
-if (index === 1) {
-  // Widen scroll range for the second card
-  start = 0.26;
-  end = 0.56;
-} else {
-  start = (index / total) * spread;
-  end = ((index + 1) / total) * spread;
-}
+      if (index === 1) {
+        start = 0.33;
+        end = 0.58;
+      } else if (index === 2) {
+        start = 0.59;
+        end = 0.85;
+      } else {
+        // First card
+        start = 0;
+        end = 0.32;
+      }
 
-                let progress = 0;
-            if (scrollProgress < start) {
-              progress = index === 0 ? scrollProgress * 5 : 0; // this fades in the first card faster
-            } else if (scrollProgress < end) {
-              progress = (scrollProgress - start) / (end - start);
-            } else {
-              progress = 1;
-}
+
+        let progress = 0;
+
+        if (scrollProgress < start) {
+          progress = index === 0 ? scrollProgress * 10 : 0; // faster fade in for first
+        } else if (scrollProgress < end) {
+          let raw = (scrollProgress - start) / (end - start);
+          // simulate a longer hold at 100% (flatten progress curve near end)
+          progress = Math.min(1, raw + Math.pow(raw, 3) * linger);
+        } else {
+          progress = 1;
+        }
 
 
                   const translateY = (1 - progress) * 120;
@@ -132,23 +144,22 @@ if (index === 1) {
                 >
                   {/* Border wrapper */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${card.borderColor} rounded-xl p-[2px]`}
+                    className={`absolute inset-0  ${card.borderColor} rounded-xl p-[2px]`}
                   >
                     <div
-                      className={`h-full w-full bg-gradient-to-br ${card.color} backdrop-blur-sm rounded-xl border border-[#F8E1C6]/20`}
+                      className={`h-full w-full ${card.color} backdrop-blur-sm rounded-xl border border-[#F8E1C6]/20`}
                     />
                   </div>
 
                   {/* Card content */}
-                  <div className="relative p-8 h-[500px] flex flex-col items-center justify-center text-center space-y-6 bg-black/70 rounded-xl shadow-2xl ring-1 ring-[#F8E1C6]/30">
-                    <div className="text-5xl mb-4">{card.icon}</div>
-                    <h3 className="text-3xl text-[#F8E1C6] font-semibold">
+                  <div className="relative p-8 h-[500px] flex flex-col items-center justify-center text-center space-y-20 bg-black/70 rounded-xl shadow-2xl ring-1 ring-[#F8E1C6]/30">
+                    <h1 className="text-5xl text-[#F8E1C6] font-semibold">
                       {card.title}
-                    </h3>
-                    <p className="text-sm text-[#F8E1C6] font-light leading-relaxed opacity-90">
+                    </h1>
+                    <p className="text-lg  text-[#F8E1C6] font-light leading-relaxed opacity-90">
                       {card.text}
                     </p>
-                    <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#F8E1C6] to-transparent mt-4" />
+                    <div className="w-50 h-[2px] bg-gradient-to-r from-transparent via-[#F8E1C6] to-transparent mt-4" />
                     <div className="absolute bottom-4 right-4 text-xs text-[#F8E1C6]/50 font-mono">
                       {Math.round(progress * 100)}%
                     </div>
