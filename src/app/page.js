@@ -1,7 +1,5 @@
 'use client';
 
-
-
 import Hero from './components/Hero';
 import Header from './components/Header';
 import Aboutus from './components/Aboutus';
@@ -9,53 +7,44 @@ import Offers from './components/Offers';
 import BarSections from './components/BarSections';
 import ContactForm from './components/ContactForm';
 import BackgroundWrapper from './components/BackgroundWrapper';
-
 import BackgroundWrapper2 from './components/BackgroundWrapper2';
 import Footer from './components/Footer';
 
-
-  export default function Home() {
+// ✨ FIX: Removed the scroll-wrapper div.
+// The page will now have natural, smooth scrolling.
+export default function Home() {
   return (
-    <div
-      id="scroll-wrapper"
-      style={{
-        height: '100vh',
-        overflowY: 'auto',
-        scrollSnapType: 'y mandatory',
-        scrollBehavior: 'smooth',
-      }}
-    ><Header />   
-      <section style={{ scrollSnapAlign: 'start'}}>
+    <main>
+      <Header />
+      
+      {/* Each section is a direct child of the main element */}
+      <section>
         <BackgroundWrapper>
           <Hero />
-          <Header />
         </BackgroundWrapper>
-  
       </section>
-      <section style={{ scrollSnapAlign: 'start'}}>
+
+      <section>
         <Aboutus />
       </section>
-            
 
-      <section style={{ scrollSnapAlign: 'start' }}>
-          <Offers />
+      <section>
+        <Offers />
       </section>
 
-
-      <section style={{ scrollSnapAlign: 'start'}}>
+      <section>
         <BackgroundWrapper2>
           <BarSections />
         </BackgroundWrapper2>
       </section>
 
-      <section style={{ scrollSnapAlign: 'start' }}>
+      <section>
         <ContactForm />
       </section>
 
-      <section style={{ scrollSnapAlign: 'start'}}>
+      <section>
         <Footer />
       </section>
-    </div>
+    </main>
   );
 }
-

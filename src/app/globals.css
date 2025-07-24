@@ -221,16 +221,16 @@ html {
 
 /* Bar Sections */
 
-.golden-border-hover {
+/* .golden-border-hover {
   position: relative;
   transition: all 0.4s ease;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
   padding: 2rem;
-}
+} */
 
-.golden-border-hover::after {
-  content: "";
+/* .golden-border-hover::after {
+  /* content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -244,11 +244,11 @@ html {
   pointer-events: none;
   transition: opacity 0.3s ease;
   opacity: 0;
-}
+} */
 
-.golden-border-hover:hover::after {
+/* .golden-border-hover:hover::after {
   opacity: 1;
-}
+} */ 
 
 
 @keyframes marquee {
@@ -310,7 +310,7 @@ html {
 
 .book:hover .inner {
   transform: rotateZ(10deg) rotateX(-3deg) rotateY(-10deg) translateX(100px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+
   z-index: 30;
   
 }
